@@ -13,6 +13,7 @@ class WebsocketTest {
            self::$save = new Save($config);
         }
         $this->server = new swoole_websocket_server($config['socket']['host'], $config['socket']['port']);
+        //new swoole_websocket_server("0.0.0.0", Config::SOCKET_PORT,SWOOLE_BASE,SWOOLE_SOCK_TCP | SWOOLE_SSL);
         $this->server->set($config['socket']['option']);
         $this->server->on('open', function (swoole_websocket_server $server, $request) {
             // echo "server: handshake success with fd{$request->fd}";

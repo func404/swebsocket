@@ -23,7 +23,9 @@ return $config = [
             'worker_num'=>2,
             'max_connection'=>256,
             'daemonize' => true,
-            'backlog'=>256
+            'backlog'=>256,
+           // 'ssl_cert_file'=>'.pem',
+           // 'ssl_key_file'=>'.key'
         ],
   ],
 
